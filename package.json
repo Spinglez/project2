@@ -13,8 +13,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+<<<<<<< HEAD
   "eslintConfig": {
     "extends": "react-app"
+=======
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
+>>>>>>> 50eecfdf59755b1e753dfff63d00a4abc085631f
   },
   "browserslist": [
     ">0.2%",
