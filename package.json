@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "auth0-js": "^9.9.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
@@ -13,18 +14,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-<<<<<<< HEAD
   "eslintConfig": {
     "extends": "react-app"
-=======
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^6.2.0",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql2": "^1.6.4",
-    "sequelize": "^4.41.2"
->>>>>>> 50eecfdf59755b1e753dfff63d00a4abc085631f
   },
   "browserslist": [
     ">0.2%",
