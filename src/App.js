@@ -1,28 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Main from './components/Main';
+import Secret from './components/Secret';
+import NotFound from './components/NotFound'
+import Callback from './components/Callback';
 
 class App extends Component {
+
   render() {
+
+    let mainComponent = ""
+    switch(this.props.location){
+      case "":
+        mainComponent = <Main {...this.props} />
+        break;
+      case "secret":
+        mainComponent = this.props.auth.isAuthenticated() ? 
+        <Secret 
+        {...this.props}
+        score = {localStorage.getItem("score")}
+        // changeScore = {this.handleScoreChange}
+        />
+         : <NotFound />
+        break;
+      case "callback":
+        mainComponent = <Callback />
+        break;
+
+      default:
+        mainComponent = <NotFound />
+    }
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <header className="App-header">
+            <h1 className = "App-title">Welcome to SlayTags! {localStorage.getItem('nickname') &&  localStorage.getItem('nickname')}</h1>
+          </header>
+        {mainComponent}
+    
       </div>
     );
   }
+  
 }
+
 
 export default App;
